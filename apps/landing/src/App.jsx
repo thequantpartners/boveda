@@ -4,13 +4,19 @@ import './index.css';
 // === PÁGINA DE GRACIAS Y UPSELL (OTO) ===
 function GraciasPage() {
   const [showDriveLink, setShowDriveLink] = useState(false);
-  const driveLink = "https://drive.google.com/file/d/1sSWez-pH5NsqMt_bXiUjB-N_cgSdKTf1/view?usp=sharing";
+  // Link de la Carpeta Compartida (Bóveda Maestra - Producto S/ 29)
+  const driveLink = "https://drive.google.com/drive/folders/1PztWxFEP34uqBJe2gamIIwiEaJMU1jiA?usp=sharing";
   
   // Link de Mercado Pago para el Upsell (S/ 67)
   const handleUpsellPurchase = (e) => {
     e.preventDefault();
-    alert("Aquí irá tu link de Mercado Pago de S/ 67");
-    // window.location.href = 'LINK_MERCADOPAGO_UPSELL';
+    alert("Aquí irá tu link de Mercado Pago de S/ 67. (Su URL de retorno será el Drive del Upsell)");
+    // Cuando tengas el link de MP, descomenta esto y pégalo:
+    // window.location.href = 'TU_LINK_DE_MERCADO_PAGO_S67';
+    
+    // NOTA PARA EL DESARROLLADOR: 
+    // El link de Google Drive del Upsell que debe ir en la configuración de Mercado Pago es:
+    // https://drive.google.com/file/d/1EWs1vPgvuq-2v_wO2BIZ1Zskal6UyTPa/view?usp=sharing
   };
 
   return (
