@@ -589,6 +589,16 @@ h2 {
     z-index: 50;
     border-top: 1px solid #E5E7EB;
   }
+  .ironclad-guarantee {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+  .guarantee-icon {
+    font-size: 2.5rem;
+  }
   h1 { font-size: 2rem; }
   .total-value .offer-price { font-size: 2.5rem; }
   .stack-item {
