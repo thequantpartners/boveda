@@ -365,6 +365,12 @@ function LandingPage() {
           </p>
         </div>
       </footer>
+
+      <div className="sticky-mobile-cta">
+        <button onClick={handlePurchase} className="cta-button pulse-btn" style={{width: '100%', fontSize: '1.1rem', padding: '0.75rem'}}>
+          QUIERO MIS GUIONES (S/29)
+        </button>
+      </div>
     </div>
   );
 }

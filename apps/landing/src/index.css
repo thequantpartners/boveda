@@ -568,8 +568,27 @@ h2 {
   50% { transform: translateY(-20px); }
 }
 
+.sticky-mobile-cta {
+  display: none;
+}
+
 /* Mobile Adjustments */
 @media (max-width: 600px) {
+  .landing-wrapper {
+    padding-bottom: 80px; /* Space for sticky CTA */
+  }
+  .sticky-mobile-cta {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 12px 20px;
+    box-shadow: 0 -10px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    border-top: 1px solid #E5E7EB;
+  }
   h1 { font-size: 2rem; }
   .total-value .offer-price { font-size: 2.5rem; }
   .stack-item {
