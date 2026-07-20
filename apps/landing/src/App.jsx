@@ -74,9 +74,7 @@ function GraciasPage() {
   // Link de Mercado Pago para el Upsell (S/ 67)
   const handleUpsellPurchase = (e) => {
     e.preventDefault();
-    alert("Aquí irá tu link de Mercado Pago de S/ 67. (Su URL de retorno será /acceso-premium)");
-    // Cuando tengas el link de MP, descomenta esto y pégalo:
-    // window.location.href = 'TU_LINK_DE_MERCADO_PAGO_S67';
+    window.location.href = 'https://mpago.la/21UuVmw';
   };
 
   return (
@@ -178,9 +176,7 @@ function LandingPage() {
   // Link de Mercado Pago para el producto principal (S/ 29)
   const handlePurchase = (e) => {
     e.preventDefault();
-    alert("Aquí irá tu link de SUSCRIPCIÓN de Mercado Pago de S/ 29. (Su URL de retorno será /gracias)");
-    // Cuando tengas el link de MP, descomenta esto y pégalo:
-    // window.location.href = 'TU_LINK_DE_SUSCRIPCION_MERCADO_PAGO_S29';
+    window.location.href = 'https://mpago.la/1YFVjgT';
   };
 
   const faqs = [
