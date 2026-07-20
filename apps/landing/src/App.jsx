@@ -5,6 +5,13 @@ import './index.css';
 function AccesoBasicoPage() {
   const driveFolderLink = "https://drive.google.com/drive/folders/1PztWxFEP34uqBJe2gamIIwiEaJMU1jiA?usp=sharing";
   
+  useEffect(() => {
+    // Seguridad básica: Verificar si viene con el token interno
+    if (!window.location.search.includes("auth=qp_secure")) {
+      window.location.href = "/";
+    }
+  }, []);
+
   return (
     <div className="access-page">
       <div className="container">
@@ -36,6 +43,13 @@ function AccesoPremiumPage() {
   const driveFolderLink = "https://drive.google.com/drive/folders/1PztWxFEP34uqBJe2gamIIwiEaJMU1jiA?usp=sharing";
   const upsellFileLink = "https://drive.google.com/file/d/1EWs1vPgvuq-2v_wO2BIZ1Zskal6UyTPa/view?usp=sharing";
   
+  useEffect(() => {
+    // Seguridad básica: Verificar si viene de Mercado Pago (tiene parámetros en la URL)
+    if (window.location.search.length < 5) {
+      window.location.href = "/";
+    }
+  }, []);
+
   return (
     <div className="access-page premium-access">
       <div className="container">
@@ -71,6 +85,13 @@ function AccesoPremiumPage() {
 
 // === PÁGINA DE GRACIAS Y UPSELL (OTO) ===
 function GraciasPage() {
+  useEffect(() => {
+    // Seguridad básica: Verificar si viene de Mercado Pago (tiene parámetros en la URL)
+    if (window.location.search.length < 5) {
+      window.location.href = "/";
+    }
+  }, []);
+
   // Link de Mercado Pago para el Upsell (S/ 67)
   const handleUpsellPurchase = (e) => {
     e.preventDefault();
@@ -96,10 +117,10 @@ function GraciasPage() {
             
             <div className="upsell-offer">
               <h3>Presentamos el "Pack de 50 Plantillas de Anuncios para Facebook & Instagram Ads"</h3>
-              <ul className="pain-list" style={{textAlign: 'left'}}>
-                <li>Textos diseñados psicológicamente para atraer prospectos que NO buscan precio, sino calidad.</li>
-                <li>Incluye indicaciones exactas de qué imagen o video poner junto al texto.</li>
-                <li>Solo copia, pega en tu Business Manager y mira cómo tu WhatsApp explota de mensajes.</li>
+              <ul className="check-list" style={{textAlign: 'left', marginTop: '1rem'}}>
+                <li>✅ Textos diseñados psicológicamente para atraer prospectos que NO buscan precio, sino calidad.</li>
+                <li>✅ Incluye indicaciones exactas de qué imagen o video poner junto al texto.</li>
+                <li>✅ Solo copia, pega en tu Business Manager y mira cómo tu WhatsApp explota de mensajes.</li>
               </ul>
             </div>
 
@@ -116,7 +137,7 @@ function GraciasPage() {
 
             <div className="decline-offer">
               <a 
-                href="/acceso-basico" 
+                href="/acceso-basico?auth=qp_secure" 
                 className="decline-link"
               >
                 No gracias. No quiero inundar mi WhatsApp de clientes. Llévame directo a mi Bóveda de Guiones de S/ 29.
