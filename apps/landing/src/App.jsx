@@ -210,8 +210,16 @@ function LandingPage() {
       a: "Es una suscripción de S/29 al mes porque CADA MES subimos nuevos guiones adaptados a las campañas de Perú (Día de la Madre, Cyber, Navidad, etc.). Pero no hay amarres, puedes cancelar al primer mes con un clic si quieres."
     },
     {
-      q: "¿Qué pasa si lo compro y no me sirve?",
-      a: "Tienes garantía incondicional. Si aplicas los guiones y sientes que no te sirvieron, cancelas tu suscripción con un clic y te quedas con todo lo que descargaste. Cero riesgo."
+      q: "¿Cómo cancelo mi suscripción para que no me cobren el siguiente mes?",
+      a: "Es facilísimo y no dependes de nosotros. Solo entras a tu app de Mercado Pago, vas a 'Suscripciones', seleccionas este plan y le das a 'Cancelar'. Listo, no se te volverá a cobrar ni un centavo."
+    },
+    {
+      q: "¿Cómo funciona exactamente la garantía y el reembolso?",
+      a: "Si aplicas los guiones y sientes que no te ayudaron a recuperar ni una sola venta, escríbenos a devoluciones@thequantpartners.com. Te devolveremos el 100% de tus S/ 29 directamente a tu cuenta de Mercado Pago sin preguntas. Y los archivos que descargaste te los quedas como regalo."
+    },
+    {
+      q: "¿Tengo que instalar alguna app o software complicado?",
+      a: "Cero tecnología. Al comprar, te damos el link a una carpeta de Google Drive. Puedes abrir los documentos desde tu celular, copiar el texto y pegarlo directamente en el chat de tu cliente en WhatsApp."
     }
   ];
 
