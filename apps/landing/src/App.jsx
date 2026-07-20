@@ -1,22 +1,82 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
 
+// === PÁGINAS DE ACCESO FINAL ===
+function AccesoBasicoPage() {
+  const driveFolderLink = "https://drive.google.com/drive/folders/1PztWxFEP34uqBJe2gamIIwiEaJMU1jiA?usp=sharing";
+  
+  return (
+    <div className="access-page">
+      <div className="container">
+        <div className="celebration-icon">🎉</div>
+        <h1>¡Felicidades! Compra Confirmada</h1>
+        <p className="subtitle">Ya eres miembro oficial de la Bóveda Maestra de Cierre por WhatsApp.</p>
+        
+        <div className="access-box">
+          <h2>Tu Compra Incluye:</h2>
+          <ul className="check-list">
+            <li>✅ Acceso a la Bóveda Maestra de Guiones</li>
+            <li>✅ Actualizaciones Mensuales Garantizadas</li>
+            <li>✅ Bonos de Audios y Prompts de IA</li>
+          </ul>
+          
+          <div className="cta-wrapper">
+            <a href={driveFolderLink} target="_blank" rel="noopener noreferrer" className="cta-button">
+              ACCEDER A MI BÓVEDA EN DRIVE
+            </a>
+          </div>
+          <p className="guarantee-text">Guarda este enlace en tus favoritos para ver las futuras actualizaciones.</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function AccesoPremiumPage() {
+  const driveFolderLink = "https://drive.google.com/drive/folders/1PztWxFEP34uqBJe2gamIIwiEaJMU1jiA?usp=sharing";
+  const upsellFileLink = "https://drive.google.com/file/d/1EWs1vPgvuq-2v_wO2BIZ1Zskal6UyTPa/view?usp=sharing";
+  
+  return (
+    <div className="access-page premium-access">
+      <div className="container">
+        <div className="celebration-icon">🏆</div>
+        <h1>¡Felicidades Miembro VIP!</h1>
+        <p className="subtitle">Has asegurado tu máquina completa de ventas (Guiones + Tráfico).</p>
+        
+        <div className="access-box">
+          <h2>Tu Arsenal Completo:</h2>
+          
+          <div className="product-access">
+            <h3>1. La Bóveda Maestra de Guiones (Suscripción)</h3>
+            <p>Aquí encontrarás tus guiones de WhatsApp y las actualizaciones mensuales.</p>
+            <a href={driveFolderLink} target="_blank" rel="noopener noreferrer" className="cta-button outline-btn">
+              ACCEDER A LA BÓVEDA (DRIVE)
+            </a>
+          </div>
+
+          <div className="product-access">
+            <h3>2. Pack de 50 Plantillas Meta Ads (Pago Único)</h3>
+            <p>Tus anuncios copy-paste para generar tráfico calificado.</p>
+            <a href={upsellFileLink} target="_blank" rel="noopener noreferrer" className="cta-button upsell-btn">
+              DESCARGAR PACK DE ANUNCIOS (PDF)
+            </a>
+          </div>
+          
+          <p className="guarantee-text" style={{marginTop: '2rem'}}>Asegúrate de guardar ambos enlaces para no perder tu acceso.</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // === PÁGINA DE GRACIAS Y UPSELL (OTO) ===
 function GraciasPage() {
-  const [showDriveLink, setShowDriveLink] = useState(false);
-  // Link de la Carpeta Compartida (Bóveda Maestra - Producto S/ 29)
-  const driveLink = "https://drive.google.com/drive/folders/1PztWxFEP34uqBJe2gamIIwiEaJMU1jiA?usp=sharing";
-  
   // Link de Mercado Pago para el Upsell (S/ 67)
   const handleUpsellPurchase = (e) => {
     e.preventDefault();
-    alert("Aquí irá tu link de Mercado Pago de S/ 67. (Su URL de retorno será el Drive del Upsell)");
+    alert("Aquí irá tu link de Mercado Pago de S/ 67. (Su URL de retorno será /acceso-premium)");
     // Cuando tengas el link de MP, descomenta esto y pégalo:
     // window.location.href = 'TU_LINK_DE_MERCADO_PAGO_S67';
-    
-    // NOTA PARA EL DESARROLLADOR: 
-    // El link de Google Drive del Upsell que debe ir en la configuración de Mercado Pago es:
-    // https://drive.google.com/file/d/1EWs1vPgvuq-2v_wO2BIZ1Zskal6UyTPa/view?usp=sharing
   };
 
   return (
@@ -58,9 +118,7 @@ function GraciasPage() {
 
             <div className="decline-offer">
               <a 
-                href={driveLink} 
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="/acceso-basico" 
                 className="decline-link"
               >
                 No gracias. No quiero inundar mi WhatsApp de clientes. Llévame directo a mi Bóveda de Guiones de S/ 29.
@@ -120,9 +178,9 @@ function LandingPage() {
   // Link de Mercado Pago para el producto principal (S/ 29)
   const handlePurchase = (e) => {
     e.preventDefault();
-    // Cuando tengas el link de MercadoPago, puedes enviarlos allí en lugar de directamente a /gracias
-    // Por ahora simulamos la compra exitosa enviándolos a la página de gracias (donde está el upsell)
-    window.location.href = '/gracias';
+    alert("Aquí irá tu link de SUSCRIPCIÓN de Mercado Pago de S/ 29. (Su URL de retorno será /gracias)");
+    // Cuando tengas el link de MP, descomenta esto y pégalo:
+    // window.location.href = 'TU_LINK_DE_SUSCRIPCION_MERCADO_PAGO_S29';
   };
 
   const faqs = [
@@ -301,6 +359,10 @@ function App() {
     <>
       {currentPath === '/gracias' ? (
         <GraciasPage />
+      ) : currentPath === '/acceso-basico' ? (
+        <AccesoBasicoPage />
+      ) : currentPath === '/acceso-premium' ? (
+        <AccesoPremiumPage />
       ) : currentPath === '/terminos' ? (
         <LegalPage />
       ) : (

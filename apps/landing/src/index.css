@@ -30,6 +30,11 @@ body {
   padding: 0 20px;
 }
 
+.text-center {
+  text-align: center;
+}
+
+/* ... existing styles ... */
 .top-banner {
   background-color: var(--dark);
   color: white;
@@ -160,6 +165,20 @@ h2 {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.check-list {
+  list-style: none;
+  margin-bottom: 2rem;
+  text-align: left;
+  display: inline-block;
+}
+
+.check-list li {
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--dark);
 }
 
 /* Testimonials */
@@ -311,31 +330,6 @@ h2 {
   font-size: 0.875rem;
 }
 
-.footer-links {
-  margin: 1.5rem 0;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.footer-links a {
-  color: var(--gray);
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  color: white;
-}
-
-.footer-disclaimer {
-  color: #4B5563;
-  font-size: 0.75rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Legal Page */
 .legal-page {
   background: white;
   min-height: 100vh;
@@ -344,18 +338,6 @@ h2 {
 
 .legal-content {
   margin-top: 3rem;
-}
-
-.legal-content h3 {
-  color: var(--dark);
-  margin: 2rem 0 1rem;
-  font-size: 1.25rem;
-}
-
-.legal-content p {
-  color: var(--text);
-  margin-bottom: 1rem;
-  line-height: 1.6;
 }
 
 /* UPSELL Y GRACIAS PAGE */
@@ -452,6 +434,80 @@ h2 {
   color: var(--text);
 }
 
+/* NEW: ACCESO PAGES */
+.access-page {
+  min-height: 100vh;
+  background: #F3F4F6;
+  padding: 4rem 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.celebration-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.access-box {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.access-box h2 {
+  margin-bottom: 2rem;
+  color: var(--dark);
+}
+
+.product-access {
+  background: var(--light);
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.product-access h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.product-access p {
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
+
+.outline-btn {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  box-shadow: none;
+  animation: none;
+}
+
+.outline-btn:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.premium-access .celebration-icon {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
 /* Mobile Adjustments */
 @media (max-width: 600px) {
   h1 { font-size: 2rem; }
@@ -461,6 +517,6 @@ h2 {
     text-align: center;
     gap: 0.5rem;
   }
-  .upsell-box { padding: 1.5rem; }
+  .upsell-box, .access-box { padding: 1.5rem; }
   .upsell-warning { font-size: 1.75rem; }
 }
