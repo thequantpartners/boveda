@@ -348,6 +348,12 @@ function LandingPage() {
 
       <footer className="footer">
         <div className="container">
+          <div className="footer-contact">
+            <h3>Contáctanos</h3>
+            <p>✉️ Mail: devoluciones@thequantpartners.com</p>
+            <p>📍 Lima, Perú | Quant Partners</p>
+          </div>
+
           <p style={{ fontWeight: 'bold', marginBottom: '1.5rem', fontSize: '1rem', color: 'var(--gray)' }}>
             2026 | Quant Partners | <a href="/terminos" style={{ color: 'inherit', textDecoration: 'underline' }}>Política de Privacidad</a> | <a href="/terminos" style={{ color: 'inherit', textDecoration: 'underline' }}>Términos y Condiciones</a>
           </p>
