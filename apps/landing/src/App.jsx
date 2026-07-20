@@ -350,7 +350,7 @@ function LandingPage() {
         <div className="container">
           <div className="footer-contact">
             <h3>Contáctanos</h3>
-            <p>✉️ Mail: devoluciones@thequantpartners.com</p>
+            <p>✉️ Mail: partners@thequantpartners.com</p>
             <p>📍 Lima, Perú | Quant Partners</p>
           </div>
 
