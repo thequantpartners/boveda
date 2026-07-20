@@ -217,23 +217,24 @@ function LandingPage() {
 
   return (
     <div className="landing-wrapper">
-      <div className="top-banner">
-        🔥 Alerta: Solo por hoy, llévate los 3 Bonos Exclusivos Gratis con tu acceso.
+      <div className="top-banner urgency-pulse">
+        🔥 ALERTA PERÚ: El precio por apertura de S/ 29 subirá a S/ 97 este viernes a las 11:59 PM. Llévate los 3 Bonos Gratis hoy.
       </div>
 
       <section className="hero">
         <div className="container">
           <h1>
-            Deja de perder dinero cada vez que das el precio por <span className="highlight">WhatsApp</span>.
+            Cómo cerrar ventas por <span className="highlight">WhatsApp</span> en 5 minutos sin regalar tu trabajo ni rogar por la venta.
           </h1>
           <p className="subtitle">
-            Descubre la Máquina Anti-Visto: Guiones copy-paste para rebatir objeciones, revivir clientes fríos y cerrar ventas en automático... sin sonar desesperado.
+            El sistema 'Copy-Paste' exacto que usan los negocios más rentables del Perú para fulminar objeciones, revivir clientes en visto y hacer que te paguen sin chistar.
           </p>
           <div className="cta-wrapper">
-            <button onClick={handlePurchase} className="cta-button">
+            <button onClick={handlePurchase} className="cta-button pulse-btn">
               QUIERO MIS GUIONES AHORA (S/29)
             </button>
-            <span className="guarantee-text">⏱️ Oferta válida solo por hoy. Acceso Inmediato.</span>
+            <span className="secure-badge">🔒 Pago 100% Seguro vía Mercado Pago Perú</span>
+            <span className="guarantee-text">⏱️ Acceso Inmediato. Cancela cuando quieras.</span>
           </div>
           <div className="trust-badges">
             <span>✅ Pago Seguro</span>
@@ -297,13 +298,21 @@ function LandingPage() {
             <span className="urgency">Menos de lo que gastas en un menú.</span>
             
             <div className="cta-wrapper">
-              <button onClick={handlePurchase} className="cta-button">
+              <button onClick={handlePurchase} className="cta-button pulse-btn">
                 SÍ, QUIERO RECUPERAR MIS VENTAS (S/29)
               </button>
+              <span className="secure-badge">🔒 Transacción Encriptada</span>
             </div>
-            <p className="risk-reversal">
-              Con UNA sola venta que recuperes hoy usando estas plantillas, ya pagaste tu suscripción. Cero riesgo.
-            </p>
+            
+            <div className="ironclad-guarantee">
+              <div className="guarantee-icon">🛡️</div>
+              <div className="guarantee-content">
+                <h3>Garantía de "Inversión Cero Riesgo"</h3>
+                <p>
+                  Esto es simple: Descarga la Bóveda, copia un guión, pégalo en tu próximo chat de WhatsApp. <strong>Si con una sola venta que cierres no recuperas tus miserables S/ 29</strong>, cancelas tu suscripción con 1 clic y te quedas con todo el material de regalo. El riesgo es 100% nuestro.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

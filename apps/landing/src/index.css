@@ -279,11 +279,51 @@ h2 {
   border-radius: 4px;
 }
 
-.risk-reversal {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: var(--gray);
-  font-weight: 600;
+.secure-badge {
+  display: block;
+  font-size: 0.875rem;
+  color: #059669;
+  font-weight: 700;
+  margin-top: 0.75rem;
+}
+
+.ironclad-guarantee {
+  margin-top: 2.5rem;
+  background: #F8FAFC;
+  border: 2px solid #CBD5E1;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.guarantee-icon {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.guarantee-content h3 {
+  font-size: 1.25rem;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+}
+
+.guarantee-content p {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.urgency-pulse {
+  animation: bg-pulse 3s infinite;
+}
+
+@keyframes bg-pulse {
+  0%, 100% { background-color: var(--dark); }
+  50% { background-color: #991B1B; } /* Dark Red */
 }
 
 /* FAQs */
