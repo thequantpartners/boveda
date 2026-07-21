@@ -387,8 +387,9 @@ function LandingPage() {
 
           <div className="total-value">
             <div className="urgency-bar-container">
-              <div className="urgency-bar-label">
-                <span>🔥 <strong>88% de los accesos reservados:</strong> Quedan solo 4 disponibles a precio promocional</span>
+              <div className="urgency-bar-header">
+                <span className="urgency-fire-text">🔥 <strong>88% de los accesos reservados</strong></span>
+                <span className="urgency-seats-badge">¡Solo 4 disponibles!</span>
               </div>
               <div className="urgency-progress-track">
                 <div className="urgency-progress-fill"></div>
@@ -463,7 +464,23 @@ function LandingPage() {
           </p>
 
           <p className="footer-disclaimer" style={{ textAlign: 'justify', fontSize: '0.75rem', color: '#6B7280', lineHeight: '1.6' }}>
-            Este sitio web es operado y mantenido por Quant Partners. El uso de este sitio web se rige por sus Términos de Servicio y Política de Privacidad. Quant Partners es una empresa proveedora de herramientas de ventas, plantillas y recursos de marketing digital. No vendemos oportunidades de negocio, programas para "hacerse rico rápidamente" ni sistemas automáticos para ganar dinero. Todos los productos, servicios, guiones, contenidos, herramientas y estrategias proporcionados por la empresa tienen fines exclusivamente educativos, referenciales e informativos.
+            Este sitio web es operado y maintained por Quant Partners. El uso de este sitio web se rige por sus Términos de Servicio y Política de Privacidad. Quant Partners es una empresa proveedora de herramientas de ventas, plantillas y recursos de marketing digital. No vendemos oportunidades de negocio, programas para "hacerse rico rápidamente" ni sistemas automáticos para ganar dinero. Todos los productos, servicios, guiones, contenidos, herramientas y estrategias proporcionados por la empresa tienen fines exclusivamente educativos, referenciales e informativos.
+            <br /><br />
+            No podemos ni garantizamos tu capacidad para obtener resultados o generar ingresos a partir de nuestras plantillas, ideas, herramientas o estrategias. Nada de lo expuesto en este sitio web, en ninguno de nuestros otros sitios, programas, contenidos o productos constituye una promesa o garantía de resultados, ingresos actuales o futuros. No realizamos afirmaciones sobre ganancias, esfuerzos ni aseguramos que el uso de nuestros guiones produzca resultados financieros específicos.
+            <br /><br />
+            Cualquier cifra financiera mencionada es únicamente ilustrativa de conceptos y no debe interpretarse como ingresos promedio, exactos o garantizados. No proporcionamos asesoramiento legal, contable, fiscal ni profesional de ningún tipo. Siempre debes consultar con tu contador, abogado o asesor profesional antes de tomar decisiones basadas en esta información relacionadas con tu negocio o finanzas.
+            <br /><br />
+            El éxito de nuestros clientes varía significativamente. Aunque compartimos plantillas y estrategias que han funcionado para otros, los resultados individuales dependen de múltiples factores, incluidos —pero no limitados a— la calidad del producto o servicio que vendes, tu mercado, experiencia previa, habilidades comerciales, dedicación, tiempo invertido y circunstancias personales. No garantizamos que obtendrás resultados similares a los ejemplos, estudios de caso o testimonios mostrados.
+            <br /><br />
+            Los testimonios, declaraciones y representaciones reflejan opiniones, hallazgos o experiencias de usuarios individuales que han adquirido nuestros recursos. Son anecdóticos y no representan necesariamente la experiencia típica ni predicen resultados futuros. Los resultados individuales pueden variar de manera significativa. No medimos ganancias ni desempeño financiero. En su lugar, podemos realizar seguimientos de transacciones completadas y niveles de satisfacción mediante encuestas voluntarias. No debes equiparar transacciones completadas con éxito financiero.
+            <br /><br />
+            Muchos clientes no continúan con el programa, no aplican lo aprendido o intentan aplicar los guiones sin obtener los resultados esperados. Al utilizar este sitio y registrarte en nuestros servicios, reconoces que eres el único responsable de tus decisiones, acciones y resultados, y aceptas no intentar responsabilizar a Quant Partners bajo ninguna circunstancia.
+            <br /><br />
+            Todo el material es propiedad intelectual de Quant Partners y está protegido por derechos de autor. Cualquier duplicación, reventa, reproducción o distribución no autorizada está estrictamente prohibida y sujeta a acciones legales. La Empresa puede enlazar o hacer referencia a contenidos, servicios o recursos creados o proporcionados por terceros no afiliados. Quant Partners no es responsable de dicho contenido ni lo respalda o aprueba.
+            <br /><br />
+            Utilizamos cookies para mejorar, promover y proteger nuestros servicios. Al continuar utilizando este sitio, aceptas nuestra Política de Privacidad y Términos de Uso.
+            <br /><br />
+            Este sitio no forma parte del sitio web de Facebook, Meta o Google. Este sitio NO está respaldado por Facebook o Google de ninguna manera. FACEBOOK es una marca registrada de META, Inc.
           </p>
         </div>
       </footer>
