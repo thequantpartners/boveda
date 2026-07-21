@@ -719,3 +719,72 @@ h2 {
   box-shadow: 0 20px 25px -5px rgba(5, 150, 105, 0.5) !important;
 }
 
+/* ANIMACIÓN DE REBOTE LEVE PARA TEXTOS / NÚMEROS CLAVE (CRO) */
+@keyframes gentle-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-3px) scale(1.02);
+  }
+}
+
+.total-value .offer-price {
+  display: block;
+  animation: gentle-bounce 2.2s infinite ease-in-out;
+}
+
+.bump-tag, .pulse-tag {
+  display: inline-block;
+  animation: gentle-bounce 1.8s infinite ease-in-out;
+}
+
+/* BARRA DE URGENCIA Y ESCASEZ (CHECKOUT) */
+.urgency-bar-container {
+  background: #FEF2F2;
+  border: 1px solid #FCA5A5;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.urgency-bar-label {
+  font-size: 0.9rem;
+  color: #991B1B;
+  margin-bottom: 0.5rem;
+}
+
+.urgency-progress-track {
+  background: #FEE2E2;
+  border-radius: 50px;
+  height: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.urgency-progress-fill {
+  background: linear-gradient(90deg, #EF4444 0%, #DC2626 100%);
+  width: 88%;
+  height: 100%;
+  border-radius: 50px;
+  background-size: 30px 30px;
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.25) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.25) 75%,
+    transparent 75%,
+    transparent
+  );
+  animation: urgency-stripe 1.5s linear infinite;
+}
+
+@keyframes urgency-stripe {
+  0% { background-position: 0 0; }
+  100% { background-position: 30px 0; }
+}
+
+

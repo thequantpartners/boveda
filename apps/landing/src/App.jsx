@@ -386,6 +386,15 @@ function LandingPage() {
           </div>
 
           <div className="total-value">
+            <div className="urgency-bar-container">
+              <div className="urgency-bar-label">
+                <span>🔥 <strong>88% de los accesos reservados:</strong> Quedan solo 4 disponibles a precio promocional</span>
+              </div>
+              <div className="urgency-progress-track">
+                <div className="urgency-progress-fill"></div>
+              </div>
+            </div>
+
             <span className="real-price">Valor Total Real: S/ 492.00</span>
             <span className="offer-price">
               {isBumpSelected ? "¡Solo S/ 39.00!" : "¡Solo S/ 29.00!"}
@@ -401,8 +410,8 @@ function LandingPage() {
                   className="order-bump-checkbox"
                 />
                 <div className="order-bump-info" style={{ textAlign: 'left' }}>
-                  <span className="bump-tag">🛡️ ORDER BUMP (+ S/ 10.00)</span>
-                  <strong className="bump-title">Añadir Garantía Extendida de "100% Cero Riesgo"</strong>
+                  <span className="bump-tag pulse-tag">🛡️ PROTECCIÓN VIP CERO RIESGO (+ S/ 10.00)</span>
+                  <strong className="bump-title">Añadir Cobertura de Reembolso Garantizado de "100% Cero Riesgo"</strong>
                   <p className="bump-desc">
                     Esto es simple: Descarga la Bóveda, copia un guión, pégalo en tu próximo chat de WhatsApp. <strong>Si con una sola venta que cierres no recuperas tu inversión</strong>, se te devuelve el 100% de tu dinero y te quedas con todo el material de regalo.
                   </p>
