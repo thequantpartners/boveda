@@ -271,6 +271,12 @@ function LandingPage() {
   const [activeFaq, setActiveFaq] = useState(null);
   const [isBumpSelected, setIsBumpSelected] = useState(false);
 
+  // Ancla suave hacia la sección de checkout/oferta
+  const scrollToCheckout = (e) => {
+    e.preventDefault();
+    document.getElementById('checkout-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   // Link de Mercado Pago según si el Order Bump está seleccionado
   const handlePurchase = (e) => {
     e.preventDefault();
@@ -315,27 +321,9 @@ function LandingPage() {
             El sistema 'Copy-Paste' exacto que usan los negocios más rentables del Perú para fulminar objeciones, revivir clientes en visto y hacer que te paguen sin chistar.
           </p>
 
-          <div className="order-bump-container">
-            <label className="order-bump-card">
-              <input 
-                type="checkbox" 
-                checked={isBumpSelected} 
-                onChange={(e) => setIsBumpSelected(e.target.checked)}
-                className="order-bump-checkbox"
-              />
-              <div className="order-bump-info">
-                <span className="bump-tag">🛡️ ORDER BUMP (+ S/ 10.00)</span>
-                <strong className="bump-title">Añadir Garantía Extendida de "100% Cero Riesgo"</strong>
-                <p className="bump-desc">
-                  Si con una sola venta que cierres no recuperas tu inversión, te reembolsamos de inmediato sin preguntas. El riesgo es 100% nuestro.
-                </p>
-              </div>
-            </label>
-          </div>
-
           <div className="cta-wrapper">
-            <button onClick={handlePurchase} className="cta-button pulse-btn">
-              {isBumpSelected ? "QUIERO MIS GUIONES + GARANTÍA (S/ 39)" : "QUIERO MIS GUIONES AHORA (S/ 29)"}
+            <button onClick={scrollToCheckout} className="cta-button pulse-btn">
+              QUIERO MIS GUIONES AHORA (S/ 29)
             </button>
             <span className="secure-badge">🔒 Pago 100% Seguro vía Mercado Pago Perú</span>
             <span className="guarantee-text">⏱️ Acceso Inmediato. Pago Único De Por Vida.</span>
@@ -376,7 +364,7 @@ function LandingPage() {
         </div>
       </section>
 
-      <section className="value-stack">
+      <section className="value-stack" id="checkout-section">
         <div className="container">
           <h2>No compres un PDF. Accede al Ecosistema de Cierre:</h2>
           
@@ -416,7 +404,7 @@ function LandingPage() {
                   <span className="bump-tag">🛡️ ORDER BUMP (+ S/ 10.00)</span>
                   <strong className="bump-title">Añadir Garantía Extendida de "100% Cero Riesgo"</strong>
                   <p className="bump-desc">
-                    Asegura tu reembolso garantizado sin preguntas si no recuperas tu inversión en tu primera venta.
+                    Esto es simple: Descarga la Bóveda, copia un guión, pégalo en tu próximo chat de WhatsApp. <strong>Si con una sola venta que cierres no recuperas tu inversión</strong>, se te devuelve el 100% de tu dinero y te quedas con todo el material de regalo.
                   </p>
                 </div>
               </label>
@@ -427,16 +415,6 @@ function LandingPage() {
                 {isBumpSelected ? "QUIERO MIS GUIONES + GARANTÍA (S/ 39)" : "SÍ, QUIERO RECUPERAR MIS VENTAS (S/ 29)"}
               </button>
               <span className="secure-badge">🔒 Transacción Encriptada</span>
-            </div>
-            
-            <div className="ironclad-guarantee">
-              <div className="guarantee-icon">🛡️</div>
-              <div className="guarantee-content">
-                <h3>Garantía de "Inversión Cero Riesgo"</h3>
-                <p>
-                  Esto es simple: Descarga la Bóveda, copia un guión, pégalo en tu próximo chat de WhatsApp. <strong>Si con una sola venta que cierres no recuperas tu inversión</strong>, se te devuelve el 100% de tu dinero y te quedas con todo el material de regalo.
-                </p>
-              </div>
             </div>
           </div>
         </div>
@@ -482,19 +460,8 @@ function LandingPage() {
       </footer>
 
       <div className="sticky-mobile-cta">
-        <div style={{ marginBottom: '0.5rem', textAlign: 'left' }}>
-          <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.8rem', fontWeight: '700', color: '#1F2937', cursor: 'pointer' }}>
-            <input 
-              type="checkbox" 
-              checked={isBumpSelected} 
-              onChange={(e) => setIsBumpSelected(e.target.checked)}
-              style={{ width: '16px', height: '16px', accentColor: '#25D366' }}
-            />
-            <span>🛡️ Añadir Garantía Extendida (+ S/ 10)</span>
-          </label>
-        </div>
-        <button onClick={handlePurchase} className="cta-button pulse-btn" style={{width: '100%', fontSize: '1.05rem', padding: '0.75rem'}}>
-          {isBumpSelected ? "ACCEDER + GARANTÍA (S/ 39)" : "QUIERO MIS GUIONES (S/ 29)"}
+        <button onClick={scrollToCheckout} className="cta-button pulse-btn" style={{width: '100%', fontSize: '1.05rem', padding: '0.75rem'}}>
+          QUIERO MIS GUIONES (S/ 29)
         </button>
       </div>
     </div>
