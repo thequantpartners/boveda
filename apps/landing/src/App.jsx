@@ -356,6 +356,28 @@ function LandingPage() {
         </div>
       </section>
 
+      <section className="qualification">
+        <div className="container">
+          <div className="qualification-box">
+            <h2>Esta Bóveda es 100% para ti si:</h2>
+            <ul className="qualification-list">
+              <li>
+                <strong>✅ Vendes productos, ropa, servicios o cursos por WhatsApp</strong> y recibes mensajes de prospectos todos los días.
+              </li>
+              <li>
+                <strong>✅ Estás cansado de mandar el precio y que te claven el visto</strong> sin tener la oportunidad de defender tu valor.
+              </li>
+              <li>
+                <strong>✅ Quieres copiar y pegar respuestas probadas en 10 segundos</strong> sin perder tiempo pensando qué escribir ni rogar por la venta.
+              </li>
+              <li>
+                <strong>✅ Buscas vender al precio justo y proteger tu margen</strong> sin regalar descuentos a la competencia más barata.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section className="value-stack" id="checkout-section">
         <div className="container">
           <h2>No compres un PDF. Accede al Ecosistema de Cierre:</h2>
