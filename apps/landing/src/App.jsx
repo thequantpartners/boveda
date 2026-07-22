@@ -484,7 +484,7 @@ function LandingPage() {
       </footer>
 
       <div className="sticky-mobile-cta">
-        <button onClick={scrollToCheckout} className="cta-button pulse-btn" style={{width: '100%', fontSize: '1.05rem', padding: '0.75rem'}}>
+        <button onClick={scrollToAgitation} className="cta-button pulse-btn" style={{width: '100%', fontSize: '1.05rem', padding: '0.75rem'}}>
           QUIERO MIS GUIONES (S/ 29)
         </button>
       </div>
