@@ -9,6 +9,13 @@ const MP_LINKS = {
   DOWNSELL: 'https://mpago.la/1tEwFNv',  // Pack 50 Anuncios Descuento (S/ 37.00)
 };
 
+// === HELPER TIKTOK PIXEL ===
+const trackTikTokEvent = (eventName, params = {}) => {
+  if (window.ttq && typeof window.ttq.track === 'function') {
+    window.ttq.track(eventName, params);
+  }
+};
+
 // === PÁGINAS DE ACCESO FINAL ===
 function AccesoBasicoPage() {
   const driveFolderLink = "https://drive.google.com/drive/folders/1PztWxFEP34uqBJe2gamIIwiEaJMU1jiA?usp=sharing";
@@ -280,6 +287,11 @@ function LandingPage() {
   // Link de Mercado Pago según si el Order Bump está seleccionado
   const handlePurchase = (e) => {
     e.preventDefault();
+    trackTikTokEvent('InitiateCheckout', { 
+      value: isBumpSelected ? 39 : 29, 
+      currency: 'PEN',
+      content_name: isBumpSelected ? 'Bóveda + Garantía VIP' : 'Bóveda Base'
+    });
     window.location.href = isBumpSelected ? MP_LINKS.BUMP : MP_LINKS.BASE;
   };
 
