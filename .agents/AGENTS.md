@@ -46,3 +46,8 @@
    - Micro-Testimonio de Cierre (Carlos M.).
 6. **Preguntas Frecuentes (FAQs):** Enfoque en Pago Único sin mensualidades.
 7. **Trust Factor & Legal Footer:** Datos de contacto `partners@thequantpartners.com` y Disclaimer legal completo.
+
+## Reglas Operativas y de Control Git
+- **Confirmación Obligatoria de Push:** SIEMPRE preguntar y solicitar autorización explícita al usuario ANTES de ejecutar `git push`.
+- **Metodología de Creación de SOPs:** 1. **Pensar** (Estrategia y Alineación) ➔ 2. **Ejecutar** (Código, Integraciones y Pruebas) ➔ 3. **Documentar** (Redacción del SOP oficial verificado).
+
