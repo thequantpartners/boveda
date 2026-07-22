@@ -6,7 +6,7 @@
 - **Backend/Dashboard:** Carpetas preparadas en `apps/backend` y `apps/dashboard` para futuras expansiones.
 
 ## Embudo de Ventas (Funnel) - 100% Pago Único (Sin Suscripciones)
-1. **Tráfico:** Meta Ads hacia la Landing Page (`/`).
+1. **Tráfico Principal:** TikTok Ads hacia la Landing Page (`/`).
 2. **Producto Principal (Landing `/`):** 
    - **Bóveda Base:** S/ 29.00 (Pago Único, Acceso De Por Vida).
      - Link Mercado Pago: `https://mpago.la/1YFVjgT`
@@ -15,12 +15,12 @@
      - Link Mercado Pago Combinado (Base + Bump S/ 39.00): `https://mpago.la/2ahKeTa`
      - Redirección en MP: `https://boveda.thequantpartners.com/gracias`
 3. **Upsell (OTO - `/gracias`):**
-   - **Pack de 50 Plantillas Meta Ads:** S/ 67.00 (Pago Único).
+   - **Pack de 50 Plantillas de Anuncios:** S/ 67.00 (Pago Único).
      - Link Mercado Pago: `https://mpago.la/21UuVmw`
      - Si ACEPTA: Paga en Mercado Pago -> Redirige a `/acceso-premium`.
      - Si RECHAZA: Clic en enlace -> Redirige a `/downsell?auth=qp_secure`.
 4. **Downsell (`/downsell`):**
-   - **Descuento Exclusivo Pack 50 Plantillas Meta Ads:** S/ 37.00 (Pago Único).
+   - **Descuento Exclusivo Pack 50 Plantillas de Anuncios:** S/ 37.00 (Pago Único).
      - Link Mercado Pago: `https://mpago.la/1tEwFNv`
      - Si ACEPTA: Paga en Mercado Pago -> Redirige a `/acceso-premium`.
      - Si RECHAZA: Clic en enlace -> Redirige a `/acceso-basico?auth=qp_secure`.
@@ -28,7 +28,7 @@
 ## Entregables (Fulfillment)
 - Los accesos se entregan vía Google Drive y PDF.
 - `/acceso-basico`: Entrega enlace a carpeta compartida de Drive para la Bóveda de Guiones.
-- `/acceso-premium`: Entrega enlace a la carpeta compartida de la Bóveda Y enlace directo al PDF de Plantillas Meta Ads.
+- `/acceso-premium`: Entrega enlace a la carpeta compartida de la Bóveda Y enlace directo al PDF de Plantillas de Anuncios.
 
 ## Reglas de Seguridad Frontend (MVP)
 - Las rutas `/gracias`, `/downsell`, `/acceso-basico` y `/acceso-premium` tienen un guardia en `useEffect` que expulsa a los usuarios que intentan acceder directamente escribiendo la URL sin los tokens de Mercado Pago o parámetros internos válidos (`auth=qp_secure`), redirigiéndolos al index `/`.
@@ -45,4 +45,4 @@
    - Casilla de Order Bump interactiva (Garantía Extendida por S/ 10).
    - Micro-Testimonio de Cierre (Carlos M.).
 6. **Preguntas Frecuentes (FAQs):** Enfoque en Pago Único sin mensualidades.
-7. **Trust Factor & Legal Footer:** Datos de contacto `partners@thequantpartners.com` y Disclaimer completo para Meta Ads.
+7. **Trust Factor & Legal Footer:** Datos de contacto `partners@thequantpartners.com` y Disclaimer legal completo.

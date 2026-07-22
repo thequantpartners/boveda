@@ -1,14 +1,14 @@
 # SOP: Creación y Despliegue de Micro-Servicios de Alta Conversión (Q-LT)
 
 **Código del Documento:** SOP-QP-001  
-**Versión:** 1.0  
-**Área:** Growth, Producto & Frontend Engineering  
+**Versión:** 1.1  
+**Área:** Growth, Producto & TikTok Ads Engineering  
 **Autor:** Quant Partners Team  
 
 ---
 
 ## 🎯 1. Objetivo del SOP
-Estandarizar y sistematizar el proceso end-to-end para lanzar cualquier nuevo **Micro-Servicio o Infoproducto** en la plataforma. Garantiza que cada nuevo producto cumpla con los estándares de **carga ultrarrápida, alta conversión (CRO), sesgos cognitivos y arquitectura de embudo probado (Pago Único).**
+Estandarizar y sistematizar el proceso end-to-end para lanzar cualquier nuevo **Micro-Servicio o Infoproducto** en la plataforma. Garantiza que cada nuevo producto cumpla con los estándares de **carga ultrarrápida, alta conversión (CRO), sesgos cognitivos y arquitectura de embudo probado para tráfico de TikTok Ads (Pago Único).**
 
 ---
 
@@ -20,7 +20,7 @@ Todo micro-servicio debe seguir la siguiente estructura de arquitectura financie
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **1. Frontend Base** | Infoproducto Principal | **S/ 29.00** | Pago Único | `MP Link 1` | `https://[dominio]/gracias` |
 | **2. Order Bump** | Cobertura VIP / Garantía Extendida | **+ S/ 10.00** *(Total S/ 39)* | Pago Único | `MP Link 2` | `https://[dominio]/gracias` |
-| **3. Upsell (OTO)** | Pack de Tráfico / Plantillas Meta Ads | **S/ 67.00** | Pago Único | `MP Link 3` | `https://[dominio]/acceso-premium` |
+| **3. Upsell (OTO)** | Pack de Tráfico / Plantillas de Anuncios | **S/ 67.00** | Pago Único | `MP Link 3` | `https://[dominio]/acceso-premium` |
 | **4. Downsell** | Oferta Descuento del Pack | **S/ 37.00** | Pago Único | `MP Link 4` | `https://[dominio]/acceso-premium` |
 
 *Nota: Si el cliente rechaza el Upsell en `/gracias`, el botón de rechazo lo deriva a `/downsell?auth=qp_secure`. Si rechaza el Downsell, se le deriva a `/acceso-basico?auth=qp_secure`.*
@@ -54,7 +54,7 @@ La Landing Page debe construirse utilizando los siguientes 7 bloques secuenciale
    - Acordeón interactivo enfocado en aclarar que es **Pago Único sin mensualidades**.
 7. **Trust & Footer Compliance:**
    - Correo oficial de contacto (`partners@thequantpartners.com`).
-   - Disclaimer legal extenso obligatorio para aprobación de campañas en Meta Ads.
+   - Disclaimer legal extenso obligatorio para aprobación de campañas de anuncios.
 
 ---
 
@@ -75,7 +75,7 @@ La Landing Page debe construirse utilizando los siguientes 7 bloques secuenciale
 
 - [ ] 1. Crear los 4 links de cobro de Pago Único en Mercado Pago.
 - [ ] 2. Verificar que las URLs de retorno en MP apunten a `/gracias` y `/acceso-premium`.
-- [ ] 3. Configurar la constantes `MP_LINKS` en `App.jsx`.
+- [ ] 3. Configurar las constantes `MP_LINKS` en `App.jsx`.
 - [ ] 4. Validar el funcionamiento del Order Bump (+S/ 10).
 - [ ] 5. Probar el flujo de rechazo: `/gracias` ➔ `/downsell` ➔ `/acceso-basico`.
 - [ ] 6. Verificar visibilidad mobile (above the fold) del badge de testimonio en la Hero section.
