@@ -80,7 +80,7 @@ h2 {
 
 /* Hero Section */
 .hero {
-  padding: 4rem 0 2rem;
+  padding: 2.5rem 0 1.5rem;
   background: white;
   border-bottom: 1px solid #E5E7EB;
 }
@@ -598,6 +598,28 @@ h2 {
   .landing-wrapper {
     padding-bottom: 80px; /* Space for sticky CTA */
   }
+  .hero {
+    padding: 1.25rem 0 1rem;
+  }
+  h1 { 
+    font-size: 1.85rem; 
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+  .cta-wrapper {
+    margin: 0.85rem 0;
+  }
+  .hero-testimonial-badge {
+    margin: 0.85rem auto 0.5rem;
+    padding: 0.75rem 0.85rem;
+  }
+  .hero-testimonial-text {
+    font-size: 0.875rem;
+  }
   .sticky-mobile-cta {
     display: block;
     position: fixed;
@@ -620,7 +642,6 @@ h2 {
   .guarantee-icon {
     font-size: 2.5rem;
   }
-  h1 { font-size: 2rem; }
   .total-value .offer-price { font-size: 2.5rem; }
   .stack-item {
     flex-direction: column;
