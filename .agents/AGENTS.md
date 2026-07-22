@@ -5,26 +5,44 @@
 - **Frontend (Landing):** `apps/landing` (Vite + React). Hospedado en Vercel.
 - **Backend/Dashboard:** Carpetas preparadas en `apps/backend` y `apps/dashboard` para futuras expansiones.
 
-## Embudo de Ventas (Funnel)
-1. **Tráfico:** Meta Ads hacia la Landing Page.
-2. **Producto Principal:** Suscripción mensual de S/ 29 (La Bóveda de Guiones).
-   - Checkout en Mercado Pago.
-   - Redirección automática a la página del Upsell (`/gracias`).
-3. **Upsell (OTO):** Pago único de S/ 67 (Pack de 50 Plantillas Meta Ads). Configurado en MP como Suscripción Limitada a 1 cobro.
-   - Si acepta: Paga en Mercado Pago -> Redirige a `/acceso-premium`.
-   - Si rechaza: Clic en botón -> Redirige a `/acceso-basico?auth=qp_secure`.
+## Embudo de Ventas (Funnel) - 100% Pago Único (Sin Suscripciones)
+1. **Tráfico:** Meta Ads hacia la Landing Page (`/`).
+2. **Producto Principal (Landing `/`):** 
+   - **Bóveda Base:** S/ 29.00 (Pago Único, Acceso De Por Vida).
+     - Link Mercado Pago: `https://mpago.la/1YFVjgT`
+     - Redirección en MP: `https://boveda.thequantpartners.com/gracias`
+   - **Order Bump de Cobertura VIP:** + S/ 10.00 (Garantía Extendida 100% Cero Riesgo).
+     - Link Mercado Pago Combinado (Base + Bump S/ 39.00): `https://mpago.la/2ahKeTa`
+     - Redirección en MP: `https://boveda.thequantpartners.com/gracias`
+3. **Upsell (OTO - `/gracias`):**
+   - **Pack de 50 Plantillas Meta Ads:** S/ 67.00 (Pago Único).
+     - Link Mercado Pago: `https://mpago.la/21UuVmw`
+     - Si ACEPTA: Paga en Mercado Pago -> Redirige a `/acceso-premium`.
+     - Si RECHAZA: Clic en enlace -> Redirige a `/downsell?auth=qp_secure`.
+4. **Downsell (`/downsell`):**
+   - **Descuento Exclusivo Pack 50 Plantillas Meta Ads:** S/ 37.00 (Pago Único).
+     - Link Mercado Pago: `https://mpago.la/1tEwFNv`
+     - Si ACEPTA: Paga en Mercado Pago -> Redirige a `/acceso-premium`.
+     - Si RECHAZA: Clic en enlace -> Redirige a `/acceso-basico?auth=qp_secure`.
 
 ## Entregables (Fulfillment)
-- Los accesos se entregan vía Google Drive.
-- `/acceso-basico`: Entrega enlace a carpeta compartida de Drive para la suscripción mensual.
-- `/acceso-premium`: Entrega enlace a la carpeta compartida Y enlace directo al PDF del Upsell.
+- Los accesos se entregan vía Google Drive y PDF.
+- `/acceso-basico`: Entrega enlace a carpeta compartida de Drive para la Bóveda de Guiones.
+- `/acceso-premium`: Entrega enlace a la carpeta compartida de la Bóveda Y enlace directo al PDF de Plantillas Meta Ads.
 
 ## Reglas de Seguridad Frontend (MVP)
-- Las rutas `/gracias`, `/acceso-basico` y `/acceso-premium` tienen un guardia en `useEffect` que expulsa a los usuarios que intentan acceder directamente escribiendo la URL sin los tokens de Mercado Pago o parámetros internos válidos, redirigiéndolos al index `/`.
+- Las rutas `/gracias`, `/downsell`, `/acceso-basico` y `/acceso-premium` tienen un guardia en `useEffect` que expulsa a los usuarios que intentan acceder directamente escribiendo la URL sin los tokens de Mercado Pago o parámetros internos válidos (`auth=qp_secure`), redirigiéndolos al index `/`.
 
-## Optimización de Conversión (CRO) y UI
-- **Copywriting:** Estilo Alex Hormozi (Agresivo, orientado al dolor de dejar en visto).
-- **Urgencia:** Banner superior con escasez real y animación de latido (pulse).
-- **Inversión de Riesgo:** Caja visual de Garantía de Hierro (100% Cero Riesgo) debajo de los precios.
-- **Mobile First:** Botón de CTA (Llamado a la acción) "Sticky" anclado en la parte inferior de la pantalla para móviles.
-- **Trust Factor:** Sección de contacto en el Footer (obligatorio para Meta Ads) usando el correo principal `partners@thequantpartners.com`. (Los correos de `devoluciones@` están configurados como un Alias gratuito en Zoho Mail que redirige al principal).
+## Optimización de Conversión (CRO) y Estructura Alex Hormozi ($100M Offers)
+1. **Banner de Urgencia Promocional:** Escasez y aviso de cambio de precio.
+2. **Hero Section (Hook & Gran Promesa):** Promesa principal + Botón de Ancla suave a agitación (`#agitation`) + Badge de Prueba Social Inline (5 estrellas, Lucía R.).
+3. **Agitación del Dolor (`❌`):** *El error que te está costando miles de soles (vistos, guerra de precios, descuentos).*
+4. **Sección de Calificación (`✅`):** *Esta Bóveda es 100% para ti si... (Auto-identificación del cliente).*
+5. **Stack de Valor & Checkout (`#checkout-section`):** 
+   - Ecosistema completo de guiones y bonos.
+   - Barra de Urgencia Roja interactiva con franjas animadas (88% reservado / 4 cupos disponibles).
+   - Animación de rebote suave (`gentle-bounce`) en precios y badges clave.
+   - Casilla de Order Bump interactiva (Garantía Extendida por S/ 10).
+   - Micro-Testimonio de Cierre (Carlos M.).
+6. **Preguntas Frecuentes (FAQs):** Enfoque en Pago Único sin mensualidades.
+7. **Trust Factor & Legal Footer:** Datos de contacto `partners@thequantpartners.com` y Disclaimer completo para Meta Ads.
