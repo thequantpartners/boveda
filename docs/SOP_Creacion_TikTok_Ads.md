@@ -12,7 +12,30 @@ Estandarizar el procedimiento para **configurar, lanzar y optimizar campañas de
 
 ---
 
-## 🔑 2. Credenciales y Conexiones Oficiales
+## 🔑 2. Guía Paso a Paso para Obtener las Credenciales (MCP & Píxel)
+
+Para conectar TikTok Ads Manager con el agente AI y registrar eventos, se deben obtener 3 credenciales clave desde el panel de TikTok:
+
+### Paso 2.1: Obtener el Advertiser Account ID
+1. Ingresar a [ads.tiktok.com](https://ads.tiktok.com).
+2. Ubicar en la esquina superior derecha (junto al perfil) el número de 19 dígitos (ej. `7664763779825025041`).
+3. También se encuentra en la URL del navegador tras `advertiser_id=`.
+
+### Paso 2.2: Crear el Píxel y Obtener el Pixel ID
+1. En TikTok Ads Manager, ir a **Tools (Herramientas)** ➔ **Events (Eventos)** ➔ **Web Events**.
+2. Hacer clic en **Get Started / Connect Data Source** ➔ Seleccionar **Web** ➔ **Manual Setup**.
+3. Elegir **TikTok Pixel + Events API (Recommended)**.
+4. Asignar el nombre del Píxel (ej. `Boveda Master Pixel`) y hacer clic en **Create**.
+5. Copiar el código del Píxel alfanumérico generado en el script (ej. `D9G1MPJC77U0255M8JG0`).
+
+### Paso 2.3: Generar el Access Token (Events API / MCP Key)
+1. Avanzar en el asistente activando la opción **Enable Automatic Advanced Matching (AAM)**.
+2. En el panel del Píxel creado, ingresar a la pestaña **Settings (Configuración)**.
+3. Desplazarse hasta la sección **Events API**.
+4. Hacer clic en el botón **Generate Access Token**.
+5. Copiar la clave alfanumérica larga generada (ej. `52b765a7f346ca264a39183148feb610868b9f4f`).
+
+### 📌 Tabla de Credenciales Oficiales de la Marca
 
 | Parámetro | Valor / ID | Estado |
 | :--- | :--- | :--- |
