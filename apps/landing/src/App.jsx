@@ -271,10 +271,10 @@ function LandingPage() {
   const [activeFaq, setActiveFaq] = useState(null);
   const [isBumpSelected, setIsBumpSelected] = useState(false);
 
-  // Ancla suave hacia la sección de checkout/oferta
-  const scrollToCheckout = (e) => {
+  // Ancla suave hacia la sección de agitación/dolor
+  const scrollToAgitation = (e) => {
     e.preventDefault();
-    document.getElementById('checkout-section')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('agitation')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   // Link de Mercado Pago según si el Order Bump está seleccionado
@@ -322,11 +322,19 @@ function LandingPage() {
           </p>
 
           <div className="cta-wrapper">
-            <button onClick={scrollToCheckout} className="cta-button pulse-btn">
+            <button onClick={scrollToAgitation} className="cta-button pulse-btn">
               QUIERO MIS GUIONES AHORA (S/ 29)
             </button>
             <span className="secure-badge">🔒 Pago 100% Seguro vía Mercado Pago Perú</span>
             <span className="guarantee-text">⏱️ Acceso Inmediato. Pago Único De Por Vida.</span>
+          </div>
+
+          <div className="hero-testimonial-badge">
+            <div className="stars">⭐⭐⭐⭐⭐ <strong>4.9/5 valoración</strong> por 1,200+ emprendedores</div>
+            <p className="hero-testimonial-text">
+              <em>"En la primera hora usando la plantilla Anti-Visto recuperé a 3 clientas. El mejor pago único de mi negocio."</em>
+            </p>
+            <span className="hero-testimonial-author">- Lucía R. (Tienda de Ropa)</span>
           </div>
 
           <div className="trust-badges">
@@ -337,7 +345,7 @@ function LandingPage() {
         </div>
       </section>
 
-      <section className="agitation">
+      <section className="agitation" id="agitation">
         <div className="container">
           <h2>El error que te está costando miles de soles:</h2>
           <ul className="pain-list">
@@ -345,22 +353,6 @@ function LandingPage() {
             <li>Te frustra ver cómo se asustan por el precio y huyen con tu competencia más barata.</li>
             <li>No sabes qué responder cuando te dicen "está muy caro" o "yo te aviso", y terminas haciendo descuentos que matan tu ganancia.</li>
           </ul>
-        </div>
-      </section>
-
-      <section className="testimonials">
-        <div className="container">
-          <h2>Lo que dicen emprendedores como tú:</h2>
-          <div className="testimonial-grid">
-            <div className="testimonial-card">
-              <p>"Antes mandaba el precio y rezaba. Ayer usé el guión de manejo de objeciones y cerré una venta de S/450 que ya daba por perdida. Increíble."</p>
-              <strong>- Carlos M. (Venta de Tecnología)</strong>
-            </div>
-            <div className="testimonial-card">
-              <p>"Pagar 29 soles es un chiste. Literalmente en la primera hora usando la plantilla Anti-Visto recuperé a 3 clientas. El mejor pago único de mi negocio."</p>
-              <strong>- Lucía R. (Tienda de Ropa)</strong>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -425,6 +417,12 @@ function LandingPage() {
                 {isBumpSelected ? "QUIERO MIS GUIONES + GARANTÍA (S/ 39)" : "SÍ, QUIERO RECUPERAR MIS VENTAS (S/ 29)"}
               </button>
               <span className="secure-badge">🔒 Transacción Encriptada</span>
+            </div>
+
+            <div className="checkout-testimonial-card">
+              <div className="stars">⭐⭐⭐⭐⭐</div>
+              <p><em>"Antes mandaba el precio y rezaba. Ayer usé el guión de manejo de objeciones y cerré una venta de S/450 que ya daba por perdida. Increíble."</em></p>
+              <strong>- Carlos M. (Venta de Tecnología)</strong>
             </div>
           </div>
         </div>

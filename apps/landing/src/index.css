@@ -811,4 +811,59 @@ h2 {
   100% { background-position: 30px 0; }
 }
 
+/* CTA INLINE TESTIMONIAL STYLES */
+.hero-testimonial-badge {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem auto 0.5rem;
+  max-width: 480px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.hero-testimonial-badge .stars {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.hero-testimonial-text {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+}
+
+.hero-testimonial-author {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--dark);
+  display: block;
+}
+
+.checkout-testimonial-card {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed #CBD5E1;
+  text-align: center;
+}
+
+.checkout-testimonial-card .stars {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.checkout-testimonial-card p {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 0.4rem;
+}
+
+.checkout-testimonial-card strong {
+  font-size: 0.85rem;
+  color: var(--dark);
+}
+
+
 
